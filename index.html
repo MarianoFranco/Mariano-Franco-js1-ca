@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>Home</title>
 </head>
-<body>
-    <header>
-        <nav></nav>
-    </header>
-    <main></main>
+<body>    
+    <header>       
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo" class="logo__img">  
+            </a>                      
+        </div>
+        <nav>
+            <ul class="nav__ul">
+              <li><a href="index.html" class="nav__ul--li">Home</a></li>
+              <li><a href="contact.html" class="nav__ul--li">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <main>
+        <div class="alert"></div>
+        <div class="loading"></div> 
+        <h1>Pokemon cards</h1>      
+        <div class="card">            
+        </div>                
+    </main>
     <footer></footer>
     <script src="js/components/alert.js"></script>
     <script src="js/script.js"></script>

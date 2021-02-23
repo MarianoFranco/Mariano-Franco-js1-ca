@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+header {
+  grid-area: header;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 20, 20, 1) 0%,
+    rgba(255, 249, 249, 1) 88%
+  );
+  height: 100px;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+  background: linear-gradient(
+    0deg,
+    rgba(20, 20, 20, 1) 0%,
+    rgba(255, 249, 249, 1) 88%
+  );
+
+  height: 100px;
+}
+h1 {
+  text-align: center;
+  background-color: rgb(241, 241, 240);
+  padding: 10px;
+  margin: 0 0 15px 0;
+  color: rgb(65, 143, 246);
+}

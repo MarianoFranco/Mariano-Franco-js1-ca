@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 200px;
+  padding: 10px 25px;
+}
+
+.logo__img {
+  width: 100%;
+}
+
+.nav__ul {
+  display: flex;
+  list-style: none;
+  position: relative;
+
+  right: 50px;
+}
+.nav__ul--li {
+  color: rgb(2, 26, 238);
+  text-decoration: none;
+  font-size: 1.5rem;
+  border: solid 2px rgb(2, 26, 238);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0px 10px;
+}
