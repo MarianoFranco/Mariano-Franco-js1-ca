@@ -21,6 +21,7 @@ header {
 }
 main {
   grid-area: main;
+  min-height: 750px;
 }
 footer {
   grid-area: footer;
@@ -38,4 +39,14 @@ h1 {
   padding: 10px;
   margin: 0 0 15px 0;
   color: rgb(65, 143, 246);
+}
+.danger {
+  background-color: red;
+  padding: 10px;
+  text-align: center;
+  border: solid 1px black;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: rgb(229, 231, 213);
 }

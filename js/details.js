@@ -30,8 +30,7 @@ async function getId(pokemonId) {
                         <div class="abilities">
                         </div>
                     </div>
-                `;
-        
+                `;        
                         
                 if (abilities) {
                     for (let i = 0; i < abilities.length; i++){
@@ -44,14 +43,8 @@ async function getId(pokemonId) {
                     document.querySelector('.abilities').innerHTML +=
                             `There are no abilities for this pokemon
                             `
-                }
-
-
-		// document.querySelector(
-		// 	'.background__image'
-		// ).style.backgroundImage = `url('${jsonResults.background_image}')`;
-
-		// document.querySelector('.desc').innerHTML = jsonResults.description;
+                }	
+		
 	} catch (error) {
 		// document.querySelector('.alert').innerHTML += showAlertTouser(
 		// 	error,

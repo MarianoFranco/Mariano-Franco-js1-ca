@@ -2,8 +2,10 @@ async function getPokemons() {
     document.querySelector('.loading').innerHTML =`
     <img src="img/pokeLoading.gif" alt="loading">
     `;
+    document.querySelector('h1').classList.add('hide');
+    document.querySelector('.card').classList.add('hide');
     try {
-        document.querySelector('h1').classList.add('hide');
+        
         const response = await fetch('https://api.pokemontcg.io/v2/cards');
         const jsonResults = await response.json();
         const pokemon = jsonResults.data;
@@ -11,6 +13,7 @@ async function getPokemons() {
 		
            
         document.querySelector('h1').classList.remove('hide');
+        document.querySelector('.card').classList.remove('hide');
         
         pokemon.forEach(value => {
             document.querySelector('.loading').innerHTML = '';
@@ -22,12 +25,16 @@ async function getPokemons() {
                     </div>               
             `    
         });
-        
+        document.querySelector('.card').classList.remove('hide');
 
 	} catch (error) {
-		document.querySelector('.alert') += showAlertTouser(error, 'danger');
+        document.querySelector('.alert').innerHTML = showAlertTouser(
+			'An error occured please contact Superman to fix it',
+			'danger'
+		);
     } finally {
         document.querySelector('.loading').classList.add('hide');
+        
         setTimeout(function () {
 			document.querySelector('.alert').innerHTML = '';
 		}, 3000);

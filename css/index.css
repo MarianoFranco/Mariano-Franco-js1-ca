@@ -3,17 +3,20 @@
   background-color: black;
   height: 700px;
 }
-.hide {
-  display: none;
-}
+
 .card {
   display: flex;
   flex-wrap: wrap;
-  width: 75%;
+  width: 80%;
   margin: 20px auto;
   border-radius: 10px;
   justify-content: center;
   background-color: rgb(238, 236, 236);
+  border: solid 1px black;
+  padding: 10px;
+}
+.hide {
+  display: none;
   border: solid 1px red;
 }
 .cards__container {
