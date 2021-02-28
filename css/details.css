@@ -13,6 +13,10 @@
   border-radius: 5px;
   border: solid 2px rgb(0, 0, 1);
   margin: 0 10px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 h2 {
   background: rgb(255, 0, 0);
@@ -28,7 +32,7 @@ h2 {
   border-radius: 10px;
   margin: 10px;
 }
-h3 {
+/* h3 {
   width: 30%;
   border: solid 1px rgb(10, 10, 10);
   text-decoration: none;
@@ -44,15 +48,42 @@ h3 {
   color: rgb(27, 27, 26);
   text-align: center;
   font-weight: bold;
-}
+} */
 p {
-  margin-left: 15px;
-  width: 80%;
-  padding: 10px 0 0 10px;
   font-size: 1.1rem;
   color: white;
 }
+.details__hp {
+  border: solid 2px black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(165, 77, 19);
+  text-align: center;
+}
+.details__level {
+  border: solid 2px black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(165, 150, 19);
+  text-align: center;
+}
 .details__abilities {
   border: solid 2px black;
-  height: 200px;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(102, 165, 19);
+  text-align: center;
+}
+
+.details__abilities--name {
+  margin: 10px auto;
+  padding: 10px;
+  border: solid 1px rgb(3, 68, 6);
+  border-radius: 10px;
+  background-color: rgb(164, 235, 78);
+  text-align: center;
+  width: 300px;
 }

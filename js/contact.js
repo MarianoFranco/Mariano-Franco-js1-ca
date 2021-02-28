@@ -49,10 +49,22 @@ submit.onclick = function(event){
         addressError.classList.add('hide');
 		addressError.classList.remove('show');
     }
-    else {
-        
+    else {        
         addressError.classList.add('show');
 		addressError.classList.remove('hide');
+    }
+
+    if(name.length && subject.length && validateEmail(email) && address.length){
+        
+        document.querySelector('.validation').innerHTML = `
+            <p class="validation__p">Passed validation</p>
+        `;
+                    
+    }else{
+        
+        document.querySelector('.validation').innerHTML = `
+        <p class="errorValidation__p">Error, please make sure that all the data introduced is valid</p>
+    `;
     }
 }
 

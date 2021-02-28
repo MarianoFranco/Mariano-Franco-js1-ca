@@ -66,3 +66,12 @@ h2 {
   text-align: center;
   font-weight: bold;
 }
+
+.card__btn:hover {
+  color: rgb(157, 248, 10);
+  font-size: 1.3rem;
+  transition: 0.4s;
+  background: transparent;
+  border: solid 2px rgb(157, 248, 10);
+  padding: 8px;
+}

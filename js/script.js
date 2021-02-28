@@ -33,8 +33,7 @@ async function getPokemons() {
 			'danger'
 		);
     } finally {
-        document.querySelector('.loading').classList.add('hide');
-        
+        document.querySelector('.loading').classList.add('hide');        
         setTimeout(function () {
 			document.querySelector('.alert').innerHTML = '';
 		}, 3000);

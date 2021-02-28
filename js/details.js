@@ -25,35 +25,53 @@ async function getId(pokemonId) {
                     </div>
                     <div class="details__container2">
                         <h2>${data.name}</h2>
-                        <p>HP: ${data.hp}</p>
-                        <p>Level: ${data.level}</p>
-                        <div class="abilities">
+                        <p class="details__hp">HP: ${data.hp}</p>
+                        <div class="details__level">
+                        </div>                        
+                        <div class="details__abilities">
                         </div>
                     </div>
                 `;        
+                
+                if(!data.level){
+                    document.querySelector('.details__level').innerHTML +=`
+                  
+                    <p>The level does not show in this pokemon</p>
+                    `
+                }
+                else{
+                    document.querySelector('.details__level').innerHTML += `
+                    
+                    <p>Level: ${data.level}</p>
+                
+                    `
+                }
                         
                 if (abilities) {
                     for (let i = 0; i < abilities.length; i++){
-                        document.querySelector('.abilities').innerHTML +=
-                            `${abilities[i].name} <br /> ${abilities[i].text}
+                        document.querySelector('.details__abilities').innerHTML +=
                             `
+                            <h3 class="details__abilities--name">${abilities[i].name}</h3>
+                            <p> ${abilities[i].text}</p>
+                            `;
                     }
                 }
                 else{
-                    document.querySelector('.abilities').innerHTML +=
-                            `There are no abilities for this pokemon
+                    document.querySelector('.details__abilities').innerHTML +=
                             `
-                }	
+                            <p>There are no abilities for this pokemon</p>
+                            `;
+                };	
 		
 	} catch (error) {
-		// document.querySelector('.alert').innerHTML += showAlertTouser(
-		// 	error,
-		// 	'danger'
-		// );
+        document.querySelector('.alert').innerHTML = showAlertTouser(
+			'An error occured please contact Superman to fix it',
+			'danger'
+		);
 	} finally {
-		// setTimeout(function () {
-		// 	document.querySelector('.alert').innerHTML = '';
-		// }, 3000);
+		setTimeout(function () {
+			document.querySelector('.alert').innerHTML = '';
+		}, 3000);
 	}
 }
 
